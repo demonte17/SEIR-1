@@ -37,3 +37,10 @@ resource "google_project_iam_member" "secret_access" {
   role   = "roles/secretmanager.secretAccessor"
   member = "serviceAccount:${google_service_account.kubernetes.email}"
 }
+
+
+#resource "google_project_iam_member" "sql_client" {
+#  role   = "roles/cloudsql.client"
+#  member = "serviceAccount:${google_service_account.kubernetes.email}"
+#}
+
